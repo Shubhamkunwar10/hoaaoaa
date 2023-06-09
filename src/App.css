@@ -1,28 +1,43 @@
 /* Customize your main colors in :root variables */
 :root {
-  --main-background-color: #343A50;
-  --card-background-color:url("img/hoareveal.gif");
+  --main-background-color: #343a50;
+  --card-background-color: url("img/hoareveal.gif");
   --countdown-background-color: #433765;
-  --main-text-color:#F7F6F4;
-  --title-text-color:#3CBA8B;
+  --main-text-color: #f7f6f4;
+  --title-text-color: #3cba8b;
 }
-
-body{
-/*  background-color:var(--main-background-color);*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /*  background-color:var(--main-background-color);*/
 
   background-position: center center;
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
   font-size: 1.1em;
 }
-	
-
-h2, p{
+.nav-link {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.nav-link > li > a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 2rem;
+  color: white;
+}
+.nav-link > li > a:hover {
+  border-bottom: 5px solid white;
+}
+h2,
+p {
   color: var(--main-text-color);
-  margin:0
+  margin: 0;
 }
 
-h3{
-font-weight: normal;
+h3 {
+  font-weight: normal;
 }
 
 /* Container */
@@ -36,10 +51,9 @@ font-weight: normal;
   justify-content: center;
   padding-top: 10rem;
   background: url("img/hoareveal.gif");
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-
 }
 @keyframes gradient-animation {
   0% {
@@ -49,9 +63,6 @@ font-weight: normal;
     background-position: 0 0;
   }
 }
-
-
-
 
 .animation-content {
   text-align: center;
@@ -83,7 +94,17 @@ font-weight: normal;
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #3a2e0d, #4e0a21, #330d27,#105257, #1a0d3a,  #155817, #251a08, #11110e);
+  background: linear-gradient(
+    45deg,
+    #3a2e0d,
+    #4e0a21,
+    #330d27,
+    #105257,
+    #1a0d3a,
+    #155817,
+    #251a08,
+    #11110e
+  );
   background-size: 200% 200%;
   animation: gradient-animations 1s linear infinite;
 }
@@ -117,7 +138,7 @@ font-weight: normal;
   transform: translate(-50%, -50%);
   width: 160px;
   height: 4px;
-  background-color: #4E44CE;
+  background-color: #4e44ce;
   animation: pulse 2s infinite;
 }
 
@@ -169,8 +190,6 @@ font-weight: normal;
 
 /* Media Query */
 @media (max-width: 1000px) {
-
-
   .animation-section {
     display: none;
   }
@@ -180,22 +199,60 @@ font-weight: normal;
   }
 }
 
-
-
 /* MintSection */
 .mint-section {
   flex: 2;
+
+  /*padding: 2rem;*/
+
+  background: linear-gradient(
+    45deg,
+    #ffc107,
+    #e91e63,
+    #e766c1,
+    #0d666d,
+    #826abb,
+    #4caf50,
+    #ff9800,
+    #11110e
+  );
+
+  background-size: 200% 100%;
+  animation: gradient-animation 10s linear infinite;
+}
+.mint-header {
+  margin: 0;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  justify-content: space-between;
+  box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
   padding: 2rem;
-    background: linear-gradient(45deg, #c99a10, #E91E63, #8bbd17,#0d666d, #826abb,  #0ea112, #FF9800, #757575);
+  background: linear-gradient(
+    45deg,
+    #c99a10,
+    #e91e63,
+    #8bbd17,
+    #0d666d,
+    #826abb,
+    #0ea112,
+    #ff9800,
+    #757575
+  );
   background-size: 200% 100%;
   animation: gradient-animation 6s linear infinite;
-
 }
-
+.mint-header-title {
+  align-content: center;
+  display: flex;
+}
+.mint-header-title > img {
+  margin-top: 17px;
+}
 .mint-title {
   font-size: 2rem;
   font-weight: bold;
-
 }
 
 .mint-description {
@@ -209,7 +266,7 @@ font-weight: normal;
 }
 
 .mint-button {
-  background-color: #4E44CE;
+  background-color: #4e44ce;
   color: #fff;
   padding: 1rem 2rem;
   border: none;
@@ -231,4 +288,66 @@ font-weight: normal;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+.collectible,
+.RoadMap {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.collection {
+  width: 200px;
+  font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 15px;
+}
+.collection > img {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
+  height: 200px;
+}
+.collection1 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.RoadMap {
+  margin-top: 15px;
+}
+.RoadMap > h1 {
+  font-size: 50px;
+}
+.RoadMap-items {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+.RoadMap-items-header {
+  display: flex;
+  justify-content: space-between;
+}
+.RoadMap-items-header > h3 {
+  background-color: black;
+  border-radius: 50px;
+  padding: 15px;
+}
+.community-link-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.community-link {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.community-link:hover {
+  font-size: x-large;
 }
